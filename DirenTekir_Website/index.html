@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diren Tekir</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="images/logo.png" class="logo" alt="Dernek Logosu">
+
+        <h1 class="title">
+            <span class="title-top">Diren Tekir</span>
+            <span class="title-bottom">Doğa ve Hayvanları Koruma Derneği</span>
+        </h1>
+
+        <!-- Sağ alt menü -->
+        <nav class="header-nav">
+            <a href="#hakkimizda">Hakkımızda</a>
+            <a href="#bagis">Bağış</a>
+            <a href="#iletisim">İletişim</a>
+        </nav>
+    </header>
+
+    <main class="content">
+
+        <h2 id="hakkimizda">Hakkımızda</h2>
+        <p>
+            Ankara’da 7 yılı aşkın bir süredir bireysel olarak besleme, tedavi, yuvalandırma ve en önemlisi
+            kısırlaştırma yapan, yüzlerce kedinin olduğu bölgelerle ilgilenen birkaç insan.
+            Artan masraflar ve borçlar bireysel olarak belimizi iyice büktüğünden uzun süredir kurmayı düşündüğümüz
+            derneğimizi sonunda hayata geçirebildik.
+            Bugüne kadar yüzlerce kedi ve köpekle ilgilendik, kısırlaştırdık, yuvalandırdık. 🐈🐈🐕
+            <br>
+            <br>
+            Hayvan hakları mücadelesinde daha güçlü bir ses olabilmek adına artık dernek olarak ilerleyeceğiz.
+            <br>
+            <br>
+            “yaşadım diyebilmen için…”
+        </p>
+
+        <h2 id="bagis">Bağış</h2>
+
+        <!-- ALT BAŞLIK 1 -->
+        <h3 class="sub-title">Havale / EFT</h3>
+        <p>
+            <strong>İsim:</strong> DİREN TEKİR DOĞA VE HAYVANLARI KORUMA DERNEĞİ
+            <br>
+            <strong>Banka:</strong> İş Bankası
+            <br>
+            <strong>IBAN:</strong> TR400006400000142171823807
+            <br>
+            <strong>Açıklama:</strong> Bağış
+            <br>
+            *Lütfen açıklamaya bağış harici bir şey yazmayınız.
+        </p>
+
+        <!-- Kopyalama Butonları -->
+        <div class="copy-buttons">
+            <button class="copy-btn" onclick="copyText('DİREN TEKİR DOĞA VE HAYVANLARI KORUMA DERNEĞİ')">📋 İsim
+                Kopyala</button>
+            <button class="copy-btn" onclick="copyText('TR400006400000142171823807')">💳 IBAN Kopyala</button>
+        </div>
+
+
+        <!-- ALT BAŞLIK 2 -->
+        <h3 class="sub-title">Banka/Kredi Kartı ile Bağış Linkleri</h3>
+
+        <p>
+            Aşağıdaki link üzerinden destek olmak istediğiniz miktarı seçerek, Iyzico aracı ödeme sitesi desteği ile
+            banka kartı ve kredi kartlarınızla güvenle destek olabilirsiniz. Adres, iletişim gibi bilgileri eksik veya
+            yanlış doldurmanızda bir sakınca yoktur, yalnızca Iyzico bir alışveriş sitesi gibi çalıştığından
+            gerekmektedir.
+        </p>
+
+        <!-- Bağış Yap Butonu -->
+        <a href="https://linktr.ee/direntekir" target="_blank" class="donate-btn">
+            ❤️ Bağış Yap
+        </a>
+
+
+
+        <h2 id="iletisim">İletişim</h2>
+
+        <div class="contact-card">
+
+            <!-- Email -->
+            <div class="contact-label">E-mail</div>
+            <a href="mailto:direntekir@gmail.com" class="contact-item">
+
+                <!-- Gmail Orijinal SVG -->
+                <span class="icon">
+                    <img src="https://www.svgrepo.com/show/303161/gmail-icon-logo.svg" alt="gmail icon">
+                </span>
+
+                <span class="text">direntekir@gmail.com</span>
+            </a>
+
+            <!-- Instagram -->
+            <div class="contact-label">Instagram</div>
+            <a href="https://www.instagram.com/direntekir" target="_blank" class="contact-item">
+
+                <!-- Instagram Orijinal SVG -->
+                <span class="icon">
+                    <img src="https://www.svgrepo.com/show/452229/instagram-1.svg" alt="instagram icon">
+                </span>
+
+                <span class="text">@direntekir</span>
+            </a>
+
+        </div>
+
+
+
+
+    </main>
+    <script>
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(function () {
+                alert("Kopyalandı: " + text);
+            });
+        }
+    </script>
+
+</body>
+
+</html>

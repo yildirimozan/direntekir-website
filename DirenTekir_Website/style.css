@@ -1,0 +1,345 @@
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Genel arka plan rengi */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f3e8;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Arka planda soluk logo */
+body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    height: 700px;
+    background-image: url("images/logo_bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.07;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    /* satır aralığı – yazıyı çok daha okunabilir yapar */
+}
+
+/* Header düzeni */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    position: relative;
+
+    background: linear-gradient(to bottom,
+            #9FAF72 0%,
+            rgba(159, 175, 114, 0.95) 70%,
+            rgba(159, 175, 114, 0) 100%);
+    color: #ffffff;
+}
+
+/* Logo */
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+/* Başlık */
+.title {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    line-height: 1.1;
+}
+
+/* Üst satır */
+.title-top {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* Alt satır */
+.title-bottom {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+/* HEADER MENÜ – Modern pastel buton stilinde */
+.header-nav {
+    position: absolute;
+    bottom: 8px;
+    right: 30px;
+    display: flex;
+    gap: 12px;
+}
+
+.header-nav a {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid #cfd8b4;
+    background-color: #f0f3e2;
+    /* pastel açık yeşil */
+    color: #4c5831;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.header-nav a:hover {
+    background-color: #e4eacb;
+    border-color: #b7c29a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.header-nav a:active {
+    transform: scale(0.97);
+}
+
+
+.header-nav a:hover {
+    background: rgba(255, 255, 255, 0.35);
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* İçerik */
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.copy-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+}
+
+.copy-btn {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: 1px solid #cfd8b4;
+    background-color: white;
+    /* pastel yeşil tonları */
+    color: #4c5831;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.copy-btn:hover {
+    background-color: #e4eacb;
+    border-color: #b7c29a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.copy-btn:active {
+    transform: scale(0.97);
+}
+
+/* Bağış alt başlıkları */
+.sub-title {
+    font-size: 22px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #4c5831;
+}
+
+/* Bağış Yap butonu */
+.donate-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid #cfd8b4;
+    color: #4c5831;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.donate-btn:hover {
+    background-color: #e4eacb;
+    border-color: #b7c29a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.donate-btn:active {
+    transform: scale(0.97);
+}
+
+/* Alt başlıklar için indent */
+.sub-title {
+    margin-left: 25px;
+    /* indent miktarı */
+}
+
+/* Alt başlık altındaki paragraflar */
+.sub-title+p {
+    margin-left: 35px;
+    /* içerik biraz daha içeride olabilir */
+}
+
+/* Kopyalama butonları da içeride olsun */
+.copy-buttons {
+    margin-left: 35px;
+}
+
+/* Bağış Yap butonu da içeride */
+.donate-btn {
+    margin-left: 35px;
+}
+
+/* İletişim kartı (arka planı kaldırılmış sade görünüm) */
+.contact-card {
+    background-color: transparent;
+    /* yeşil zemin kaldırıldı */
+    border: none;
+    /* kenarlık kaldırıldı */
+    padding: 0;
+    /* içerik doğrudan sayfaya oturacak */
+    margin-top: 20px;
+}
+
+/* Tek tek satırlar */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 14px;
+
+    /* Genişlik ayarı */
+    max-width: 200px;
+    /* Gmail uzunluğu için ideal */
+    width: 100%;
+    /* küçülen ekranlarda uyumlu */
+
+    background-color: white;
+    border-radius: 10px;
+    text-decoration: none;
+
+    user-select: text;
+
+    color: #4c5831;
+    font-size: 16px;
+    font-weight: 500;
+
+    border: 1px solid #e1e6cf;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+
+    margin-bottom: 12px;
+    /* kutular arası boşluk */
+}
+
+
+
+/* Hover efekti */
+.contact-item:hover {
+    background-color: #e9efd8;
+    border-color: #c5ceab;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* İkonlar */
+.contact-item .icon {
+    font-size: 20px;
+}
+
+/* Instagram & Mail yazıları */
+.contact-item .text {
+    font-size: 15px;
+}
+
+/* Küçük açıklama başlıkları */
+.contact-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4c5831;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    opacity: 0.8;
+}
+
+/* SVG ikon boyutu */
+.contact-item img {
+    width: 22px;
+    height: 22px;
+}
+
+/* Mevcut contact-item stili ikonlarla uyumlu çalışır */
+
+/* Mobil görünüm düzeltmesi */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 40px;
+        /* butonlara yer açılsın */
+    }
+
+    .title {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .header-nav {
+        position: static;
+        /* absolute kaldırıldı */
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .header-nav a {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+
+    .logo {
+        width: 70px;
+        /* mobilde daha iyi orantı */
+    }
+}
+
+/* Ana başlıklar (Hakkımızda, Bağış, İletişim) */
+h2 {
+    color: #3f2f1b;
+}
